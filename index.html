@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Document</title>
+</head>
+<body>
+
+	<script>
+	
+		function sum(){
+			
+			var s1 = 0;
+			var s2 = 0;
+			var arr = document.getElementById("nums").value.split(" ");
+						
+			for (i = 0; i != arr.length; i++) {
+				
+				if (arr[i]>0) {
+					s1 += Number(arr[i]);
+				} 
+				
+				else {
+					s2 += Number(arr[i]);
+				}
+				
+			}
+			
+			if (Math.abs(s1)>Math.abs(s2)) {
+				alert("Модуль суммы положительных чисел больше; "+s1);
+			}
+			
+			if (Math.abs(s1)==Math.abs(s2)) {
+				alert("Модуль суммы положительных и отрицательных чисел равны; "+s1);
+			}
+			
+			
+			else {
+				alert("Модуль отрицательных чисел больше; "+s2);
+			}
+			
+		}
+	
+	</script>
+	
+	<input type="text" id="nums" placeholder="Введите последовательность чисел через запятую" style="width: 400px">
+	<input type="submit" onclick="sum()" value="Рассчитать">
+	
+</body>
+</html>
